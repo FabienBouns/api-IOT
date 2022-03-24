@@ -17,4 +17,4 @@ app.use(cors())
 
 app.use("/api", require("./routes/data"));
 
-server.listen(1234, () => console.log(`Server started!`));
+server.listen(process.env.PORT, () => console.log(`Server started!`));
