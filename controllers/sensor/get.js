@@ -5,6 +5,6 @@ module.exports = async function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.status(200).json({
         "success": true,
-        "sensor": data
+        "sensors": data
     })
 };
