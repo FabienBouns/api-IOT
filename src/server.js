@@ -1,7 +1,7 @@
 const { App } = require("gatos");
 require("dotenv").config();
 
-const { DB_USERNAME, DB_PASSWORD } = process.env;
+const { DB_USERNAME, DB_PASSWORD, PORT } = process.env;
 
 $$roles.anonymous = "*";
 
@@ -9,7 +9,7 @@ App.middlewares = "./middlewares";
 App.routes = "./routes";
 
 App.clear.listen(
-  1234,
+  PORT,
   "mongodb+srv://" +
     DB_USERNAME +
     ":" +
